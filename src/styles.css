@@ -9,10 +9,21 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+.containerBlock {
+  max-width: 1124px;
+  margin: auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 5px;
+}
 
 .container {
+  display: inline-block;
   max-width: 500px;
-  margin: 30px auto;
+  width: 50%;
+  margin: 30px 15px 30px 15px;
   overflow: auto;
   min-height: 300px;
   border: 1px solid steelblue;

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, output , EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output , EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-runbutton',
@@ -8,7 +8,7 @@ import { Component, OnInit, Input, output , EventEmitter} from '@angular/core';
 export class RunbuttonComponent implements OnInit {
   @Input() text: string;
   @Input() colour: string;
-  @output() playBtnClick= new EventEmitter();
+  @Output() playBtnClick= new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
