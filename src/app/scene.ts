@@ -12,5 +12,6 @@ export interface sceneNode {
   depth?: number;
   distance?: number;
   index?: number;
-children?: sceneNode[];
+  children?: sceneNode[];
+  parent?: sceneNode;
 }
