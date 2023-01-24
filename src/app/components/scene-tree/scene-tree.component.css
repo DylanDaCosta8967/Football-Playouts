@@ -1,0 +1,34 @@
+.example-tree-invisible {
+  display: none;
+}
+
+.saved-selections {
+  font-size: smaller;
+}
+
+.saved-selections a {
+  color: whitesmoke;
+}
+
+.checklist-leaf-node {
+  padding-left: 40px;
+}
+
+.submit-button {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.checklist-leaf-node {
+  padding-left: 40px;
+}
+
+ul { list-style-position: inside; }
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+

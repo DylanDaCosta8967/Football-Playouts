@@ -8,6 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 
 
+
 @Component({
   selector: 'app-scene-tree',
   templateUrl: './scene-tree.component.html',
@@ -37,6 +38,32 @@ public dataSource = new MatTreeNestedDataSource<sceneNode>();
         this.setParent(childNode, node);
      });
     }
+  }
+
+
+  public itemToggle(checked: boolean, node: sceneNode) {
+    node.selected = checked;
+    if (node.children) {
+      node.children.forEach(child => {
+        this.itemToggle(checked, child);
+      });
+    }
+    this.checkAllParents(node);
+  }
+
+    private checkAllParents(node: sceneNode) {
+    if (node.parent) {
+      const descendants = this.treeControl.getDescendants(node.parent);
+      node.parent.selected = 
+        descendants.every(child => child.selected);
+      node.parent.indeterminate = 
+        descendants.some(child => child.selected);
+      this.checkAllParents(node.parent);
+    }
+  }
+
+    public loadSelection(index: number) {
+    alert("Tune in next week for this feature!");
   }
 
 
